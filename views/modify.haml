@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:charset=>'uth-8'}
+    %title Test
+  %body
+    %table{:border=>1}
+      %thead
+        %tr
+          %th ID
+          %th NAME
+      %tbody
+        %tr          
+          %td= @member.id
+          %form{:method=>"post", :action=>"/modify2"}
+            %input{:type=>"hidden", :name=>"id", :value=>@member.id}
+            %td
+              %input{:type=>"text", :name=>"new_name", :value=>@member.name}
+            %td
+              %input{:type=>"submit", :value=>"編集"}
+
+
+
+
+
+
+
+
+
+
+
